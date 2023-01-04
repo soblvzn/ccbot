@@ -200,10 +200,10 @@ async def Wink(card, mm, yy, cvc, name, a):
     if "reqNote" in bind:
         aye1 = bind["reqUserMsg"]
         print(aye1)
-        print(f"💳 Карта: {card}|{mm}|{yy}|{cvc}\n💎 Результат: ❌ #DEAD - {aye1}\n🌌 Бот - @haruzakiccbot\n🕐 Время: {str(b - a)[:4]}(s)\n👨‍💻 Чекнул: {name}")
-        return(f"💳 Карта: {card}|{mm}|{yy}|{cvc}\n💎 Результат: ❌ #DEAD - {aye1}\n🌌 Бот - @haruzakiccbot\n🕐 Время: {str(b - a)[:4]}(s)\n👨‍💻 Чекнул: {name}")
+        print(f"💳 Карта: {card}|{mm}|{yy}|{cvc}\n💎 Результат: ❌ #DEAD - {aye1}\n🌌 Бот - @soblazncc\n🕐 Время: {str(b - a)[:4]}(s)\n👨‍💻 Чекнул: {name}")
+        return(f"💳 Карта: {card}|{mm}|{yy}|{cvc}\n💎 Результат: ❌ #DEAD - {aye1}\n🌌 Бот - @soblazncc\n🕐 Время: {str(b - a)[:4]}(s)\n👨‍💻 Чекнул: {name}")
     else:
-        return(f"💳 Карта: {card}|{mm}|{yy}|{cvc}\n💎 Результат : ✅ #LIVE - {payamount[:2]}.{payamount[2:]}₽\n🌌 Бот - @haruzakiccbot\n🕐 Время: {str(b - a)[:4]}(s)\n👨‍💻 Чекнул: {name}")
+        return(f"💳 Карта: {card}|{mm}|{yy}|{cvc}\n💎 Результат : ✅ #LIVE - {payamount[:2]}.{payamount[2:]}₽\n🌌 Бот - @soblazncc\n🕐 Время: {str(b - a)[:4]}(s)\n👨‍💻 Чекнул: {name}")
 
 @dp.message_handler(commands="start")
 async def startt(message: types.Message):
@@ -212,7 +212,7 @@ async def startt(message: types.Message):
     keyboard.add(types.InlineKeyboardButton(text="🦾 Профиль", callback_data="profile"))
     keyboard.add(types.InlineKeyboardButton(text="☑️ Благодарности", callback_data="credits"))
     keyboard.add(types.InlineKeyboardButton(text="👤 Нашли баг или недоработку?", url="https://t.me/soblazncc"))
-    await message.answer_photo(photo=InputFile(r"E:\\work\\start.png"), caption=f'''👹 HaruzakiChecker\n\n🔁 Канал бота: @haruzakichecker\n\n🛠 Версия бота: v1.0(beta)\n\n👤 Разработчик: @soblazncc''', reply_markup=keyboard)
+    await message.answer_photo(photo=InputFile(r"E:\\work\\start.png"), caption=f'''👹 HaruzakiChecker\n\n🔁 Канал бота: @soblazncc\n\n🛠 Версия бота: v1.0(beta)\n\n👤 Разработчик: @soblazncc''', reply_markup=keyboard)
     if str(message.from_user.id) in subs:
         print("okay")
     else:
@@ -237,7 +237,7 @@ async def without_puree(call: types.CallbackQuery):
 
 @dp.callback_query_handler(text="credits")
 async def without_puree(call: types.Message):
-    await call.message.answer_photo(photo=InputFile(r"E:\\work\\credits.png"), caption=f'''📲 Тестеры: @qwvdxh & @soblazncc\n\n💲 Донатеры: @qwvdxh - 60$ & @kroh1m - 1230₽\n\n''')
+    await call.message.answer_photo(photo=InputFile(r"E:\\work\\credits.png"), caption=f'''📲 Тестеры: @soblazncc\n\n💲 Донатеры: @soblazncc - 60$ & @kroh1m - 1230₽\n\n''')
 
 
 
